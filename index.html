@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Basic Embed</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- TABLUE INFRASTRUCTIOR -->
+    <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    <!-- Font Wasom -->
+    <script src="https://kit.fontawesome.com/08d515a87b.js" crossorigin="anonymous"></script>
+</head>
+
+<body onload="initViz();">
+
+    <nav class="navBar">
+        <h2 class="h2-Nav">DSS Projet</h2>
+        <div class="divSheet">
+            <span class="Sheet"><a href="#Data Filtring" class="Links">Data Filtring</a> </span>
+            <span class="Sheet"><a href="#Sheet1" class="Links">Sheet-1</a></span>
+            <span class="Sheet"><a href="#Sheet2" class="Links">Sheet-2</a></span>
+            <span class="Sheet"><a href="#Sheet3" class="Links">Sheet-3</a></span>
+            <span class="Sheet"><a href="#Sheet4" class="Links">Sheet-4</a></span>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Tablue Format -->
+        <div id="vizContainer" class="TablueFormat" style="width:800px; height:700px;">
+            <h1>Titanik Data-Set</h1>
+        </div>
+
+        <hr>
+
+        <div class="Data Filtring" id="Data Filtring">
+            <h2>Data Filtring(preprocessing)</h2>
+            <a href="#Top" class="Top">Top<i class="fa-sharp fa-solid fa-arrow-up"></i></a>
+            <p>the main problem we faced is <span class="span">NULL</span> values manly on tow clomun that we used
+            <ul>
+                <li><span class="span">Age</span></li>
+                <li><span class="span">Embarked</span></li>
+            </ul>
+            we used tow technique to fix this problem:
+            <ul>
+                <li>for <span class="span">Age</span> we used Exil </li>
+                <li>for <span class="span">Embarked</span> we used the filter option on Tablue</li>
+            </ul>
+            Then we changed the <span class="span">Age</span> type from <b>Number(decimal)</b> to <b>Number(whole)</b>
+            <br>
+            Last thing we changed <span class="span">Pcalss</span> from <b>Numebr</b> to <b>String</b> as following:
+            <ul>
+                <li><span class="span">1</span> To <span class="span">First Class</span></li>
+                <li><span class="span">2</span> To <span class="span">Second Class</span></li>
+                <li><span class="span">3</span> To <span class="span">Thierd Class</span></li>
+            </ul>
+            </p>
+        </div>
+
+        <hr>
+
+        <div class="Sheet#1" id="Sheet1">
+            <h2>Distribution of ages who were in the ship and gender for each age group</h2>
+            <a href="#Top"class="Top">Top<i class="fa-sharp fa-solid fa-arrow-up"></i></a>
+            <p>Show age group and which gender group makes up the largest number within the age group. <br>
+                Some conclusions :
+            <ul>
+                <li>most people on the ship in age between <span class="span">15-35</span> <b>(youth).</b></li>
+                <li>Number of male exceed number of girl.</li>
+                <li>people with <span class="span">45</span> and <span class="span">70 </span><b>(Ulder)</b> a few.</li>
+                <li>people with <span class="span">5</span> and <span class="span">15 </span><b>(Children)</b> a few.
+                </li>
+            </ul>
+            </p>
+        </div>
+
+        <hr>
+
+        <div class="Sheet#1" id="Sheet2">
+            <h2>The number of survivors in each Embarked</h2> 
+            <a href="#Top" class="Top">Top<i class="fa-sharp fa-solid fa-arrow-up"></i></a>
+            <p>Show Number of people survived according to wich port they <span class="span">Emparked</span>
+                from.<br>
+                Some conclusions :
+            <ul>
+                <li>Port <span class="span">S</span> survived the most.</li>
+                <li>Port <span class="span">C</span> The second port in terms of the number of survivors.</li>
+                <li>Port <span class="span">Q</span> Lowest number of survivors.</li> <br>
+            </ul>
+            </p>
+        </div>
+
+        <hr>
+
+        <div class="Sheet#3" id="Sheet3">
+            <h2>The difference in survival rates by passenger class</h2> 
+            <a href="#Top" class="Top">Top<i class="fa-sharp fa-solid fa-arrow-up"></i></a>
+            <p>The number of people who survived from each <span class="span">Class</span>.<br>
+                Some conclusions :
+            <ul>
+                <li><span class="span">First Class</span> survived the most.</li>
+                <li><span class="span">Second Class</span> Lowest number of survivors.</li>
+                <li><span class="span">Thierd Class</span> The second port in terms of the number of survivors.
+                </li> <br>
+                We can see in <span class="span">First Class</span> <b>120</b> survived but in other class the number
+                between <b>80-85</b>
+                and this indicates that more precautions were taken.
+            </ul>
+            </p>
+        </div>
+
+        <hr>
+
+        <div class="Sheet#3" id="Sheet4">
+            <h2>The number of people in each Class, classified by sum Fare</h2> 
+            <a href="#Top" class="Top">Top <i class="fa-sharp fa-solid fa-arrow-up"></i></a>
+            <p>This chart represents the number of people in each class and the price for each class  <br>
+                The <span class="span">color</span>  indicates the ticket price for each class. <br>
+                The <span class="span">size</span>  indicates the number of people who bought the ticket. <br>
+                Some conclusions :
+            <ul>
+                <li><span class="span">First Class</span> is the most expensive price, but it is in the second place according to the order of the number of people who bought a ticket in it.</li>
+                <li><span class="span">Second Class</span> is the lowest price and is the lowest class in which the ticket was purchased.</li>
+                <li><span class="span">Thierd Class</span> is the lowest price and is the lowest class in which the ticket was purchased</li> <br>
+                
+            </ul>
+            </p>
+        </div>
+    </main>
+
+    <script src="js.js"></script>
+</body>
+
+</html>

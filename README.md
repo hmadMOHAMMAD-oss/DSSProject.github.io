@@ -1,2 +1,2 @@
-# DSSProject.github.io
-Created BY : Ahmad AL Qurashi-139829 and Ahmad Mohammad-140339
+# DSS.github.io
+This Project Created by : Ahmad Mohammad - 140339 / Ahmad AL Qurashi - 139829
